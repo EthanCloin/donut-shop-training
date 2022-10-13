@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/donut:id" element={<DonutDetail />} />
+          <Route path="/donut:donutId" element={<DonutDetail />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>
