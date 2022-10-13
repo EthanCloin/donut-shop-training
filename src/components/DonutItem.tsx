@@ -1,12 +1,16 @@
+import { Link } from "react-router-dom";
 import "./DonutItem.css";
 
 interface Props {
   title: string;
+  id: number;
 }
-const DonutItem = ({ title }: Props) => {
+const DonutItem = ({ title, id }: Props) => {
   return (
     <div className="Donut">
-      <h2>{title}</h2>
+      <Link to="/donut/">
+        <h2>{title}</h2>
+      </Link>
     </div>
   );
 };
