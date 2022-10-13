@@ -3,12 +3,12 @@ import "./DonutItem.css";
 
 interface Props {
   title: string;
-  id: number;
+  id: string;
 }
 const DonutItem = ({ title, id }: Props) => {
   return (
     <div className="Donut">
-      <Link to="/donut/">
+      <Link to={`/donut/${id}`}>
         <h2>{title}</h2>
       </Link>
     </div>

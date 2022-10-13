@@ -8,7 +8,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import DonutDetail from "./components/DonutDetail";
+import DonutItemDetail from "./components/DonutItemDetail";
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/donut:donutId" element={<DonutDetail />} />
+          <Route path="/donut/:donutId" element={<DonutItemDetail />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </Router>

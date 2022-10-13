@@ -4,7 +4,7 @@ export interface DonutListResponse {
 }
 
 export interface Donut {
-  id: number;
+  id: string;
   ref: string;
   photo: string;
   photo_attribution: string;
