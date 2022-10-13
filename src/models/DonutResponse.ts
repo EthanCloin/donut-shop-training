@@ -8,10 +8,10 @@ export interface Donut {
   ref: string;
   photo: string;
   photo_attribution: string;
+  name: string;
 }
 
 export interface DonutDetail extends Donut {
-  name: string;
   calories: number;
   extras: string[];
 }
