@@ -1,5 +1,5 @@
 import { ReactNode, useState } from "react";
-import { Donut } from "../models/DonutResponse";
+import { Donut, DonutDetail } from "../models/DonutResponse";
 import CartContext from "./CartContext";
 
 interface Props {
@@ -7,8 +7,8 @@ interface Props {
 }
 
 const CartContextProvider = ({ children }: Props) => {
-  const [cartDonuts, setCartDonuts] = useState<Donut[]>([]);
-  const addDonutToCart = (donut: Donut): void => {
+  const [cartDonuts, setCartDonuts] = useState<DonutDetail[]>([]);
+  const addDonutToCart = (donut: DonutDetail): void => {
     setCartDonuts((prev) => [...prev, donut]);
   };
   const removeDonutFromCart = (id: string): void => {

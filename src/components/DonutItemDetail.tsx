@@ -21,8 +21,8 @@ const DonutItemDetail = () => {
     <div className="DonutDetail">
       {donut ? (
         <div>
-          <h1>All About {donut.name}!</h1>
-          <p>only {donut.calories}</p>
+          <h1>Have a {donut.name}!</h1>
+          <p>(only {donut.calories} calories)</p>
           <button onClick={() => addDonutToCart(donut)}>Add to Cart</button>
           {donut.photo !== "" && (
             <DonutPic url={donut.photo} attribution={donut.photo_attribution} />
@@ -43,8 +43,11 @@ interface PicProps {
 const DonutPic = ({ url, attribution }: PicProps) => {
   return (
     <div className="DonutPic">
-      <img src={url} />
-      <p>{attribution}</p>
+      <img width="300" height="300" src={url} />
+      <p>
+        <strong>Photo by: </strong>
+        <a href={attribution}>Wikimedia</a>
+      </p>
     </div>
   );
 };

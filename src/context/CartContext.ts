@@ -1,9 +1,9 @@
 import { createContext } from "react";
-import { Donut } from "../models/DonutResponse";
+import { Donut, DonutDetail } from "../models/DonutResponse";
 
 interface CartContextModel {
-  cartDonuts: Donut[];
-  addDonutToCart: (donut: Donut) => void;
+  cartDonuts: DonutDetail[];
+  addDonutToCart: (donut: DonutDetail) => void;
   removeDonutFromCart: (id: string) => void;
   inCart: (id: string) => boolean;
 }
